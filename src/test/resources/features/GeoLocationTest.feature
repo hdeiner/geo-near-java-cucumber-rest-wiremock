@@ -2,7 +2,7 @@ Feature: Geolocation!
   blah, blah, blah
 
   Scenario Outline: Check a test case for 07440
-    Given I have an account at http://api.geonames.org of "howarddeiner", but I am testing on a fake
+    Given I have an account at http://api.geonames.org of "howarddeiner"
 	 When I find nearby postal codes with postalCode "07440", country "US", and radius "10.0"
 	 Then for row = "<row>", placeName = "<placeName>", postalCode = "<postalCode>", latitude = "<latitude>", longitude = "<longitude>", and distance = "<distance>"
 	  
@@ -15,7 +15,7 @@ Feature: Geolocation!
       |4  |Towaco        |07082     |40.927691|-74.342807|4.49536 |
         
   Scenario Outline: Check a test case for 60008
-    Given I have an account at http://api.geonames.org of "howarddeiner"
+    Given I have an account at http://api.geonames.org of "howarddeiner", but I am testing on a fake
 	 When I find nearby postal codes with postalCode "60008", country "US", and radius "10.0"
 	 Then for row = "<row>", placeName = "<placeName>", postalCode = "<postalCode>", latitude = "<latitude>", longitude = "<longitude>", and distance = "<distance>"
 	  

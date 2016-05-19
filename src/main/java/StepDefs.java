@@ -15,7 +15,7 @@ public class StepDefs {
 	public void i_have_an_account_at_http_api_geonames_org_of(String accountName) throws Throwable {
 	    this.accountName = accountName;
 	    nearbyPostalCodes = null;
-	    useFakeServer = true;
+	    useFakeServer = false;
 	}
 	
 	@Given("^I have an account at http://api\\.geonames\\.org of \"([^\"]*)\", but I am testing on a fake$")
@@ -23,7 +23,7 @@ public class StepDefs {
 	    // Write code here that turns the phrase above into concrete actions
 	    this.accountName = accountName;
 	    nearbyPostalCodes = null;
-	    useFakeServer = false;
+	    useFakeServer = true;
 	}
 	
 	@When("^I find nearby postal codes with postalCode \"([^\"]*)\", country \"([^\"]*)\", and radius \"([^\"]*)\"$")
