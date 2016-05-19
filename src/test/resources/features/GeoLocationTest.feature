@@ -4,7 +4,7 @@ Feature: Geolocation!
   Scenario Outline: Check a test case for 07440
     Given I have an account at http://api.geonames.org of "howarddeiner"
 	 When I find nearby postal codes with postalCode "07440", country "US", and radius "10.0"
-	 Then for row = "<row>", placeName = "<placeName>", postalCode = "<postalCode>", latitude = "<latitude>", longitude = "<longitude>", and distance = "<distance>"
+	 Then row = "<row>", placeName = "<placeName>", postalCode = "<postalCode>", latitude = "<latitude>", longitude = "<longitude>", and distance = "<distance>"
 	  
 	Examples:
       |row|placeName     |postalCode|latitude |longitude |distance|
@@ -17,7 +17,7 @@ Feature: Geolocation!
   Scenario Outline: Check a test case for 60008
     Given I have an account at http://api.geonames.org of "howarddeiner", but I am testing on a fake
 	 When I find nearby postal codes with postalCode "60008", country "US", and radius "10.0"
-	 Then for row = "<row>", placeName = "<placeName>", postalCode = "<postalCode>", latitude = "<latitude>", longitude = "<longitude>", and distance = "<distance>"
+	 Then row = "<row>", placeName = "<placeName>", postalCode = "<postalCode>", latitude = "<latitude>", longitude = "<longitude>", and distance = "<distance>"
 	  
 	Examples:
       |row|placeName        |postalCode|latitude|longitude|distance|

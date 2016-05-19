@@ -31,8 +31,8 @@ public class StepDefs {
 		nearbyPostalCodes = new NearbyPostalCodes(accountName, postalCode, country, new Double(radius), useFakeServer);
 	}
 	
-	@Then("^for row = \"([^\"]*)\", placeName = \"([^\"]*)\", postalCode = \"([^\"]*)\", latitude = \"([^\"]*)\", longitude = \"([^\"]*)\", and distance = \"([^\"]*)\"$")
-	public void for_row_placeName_postalCode_latitude_longitude_and_distance(String index, String placeName, String postalCode, String latitude, String longitude, String distance) throws Throwable {
+	@Then("^row = \"([^\"]*)\", placeName = \"([^\"]*)\", postalCode = \"([^\"]*)\", latitude = \"([^\"]*)\", longitude = \"([^\"]*)\", and distance = \"([^\"]*)\"$")
+	public void row_placeName_postalCode_latitude_longitude_and_distance(String index, String placeName, String postalCode, String latitude, String longitude, String distance) throws Throwable {
 	    int rowNumber = new Integer(index);
 		assertEquals(placeName, nearbyPostalCodes.getPlaceName(rowNumber));
 	    assertEquals(postalCode, nearbyPostalCodes.getPostalCode(rowNumber));
